@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bajatama Group - Kontraktor Profesional",
+  title: "Navara - Jelajahi Keindahan Nusantara",
   description:
-    "Kontraktor profesional yang mengutamakan kualitas, ketepatan waktu, dan keamanan.",
+    "Rasakan pengalaman perjalanan wisata premium dengan bus mewah ke destinasi eksotis di seluruh Indonesia",
 };
 
 export default function RootLayout({
