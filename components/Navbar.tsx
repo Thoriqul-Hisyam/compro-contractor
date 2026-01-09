@@ -4,10 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Bus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
   const navLinks = [
     { label: "Beranda", href: "#home" },
     { label: "Tentang Kami", href: "#about" },
@@ -43,7 +44,11 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="hero" size="lg">
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={() => router.push("/booking")}
+            >
               Pesan Sekarang
             </Button>
           </div>
@@ -78,11 +83,14 @@ const Navbar = () => {
               ))}
 
               <div className="px-4 pt-2">
-                <Link href="/booking" passHref>
-                  <Button variant="hero" size="lg" className="w-full">
-                    Pesan Sekarang
-                  </Button>
-                </Link>
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="w-full"
+                  onClick={() => router.push("/booking")}
+                >
+                  Pesan Sekarang
+                </Button>
               </div>
             </div>
           </div>
